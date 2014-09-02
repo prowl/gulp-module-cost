@@ -1,0 +1,44 @@
+#Build Environment
+build_environment: Ubuntu 12.04
+
+#language setting
+language: node_js
+
+node_js:
+  - 0.11
+
+# environment variables
+env:
+  global:
+    - NODE_ENV=test
+
+#notifications
+notifications:
+  email:
+    recipients:
+      - jfugett27@gmail.com
+      - jfugett@thotjs.io
+    on_success: change
+    on_failure: always
+
+before_install:
+  npm install -g gulp
+
+install:
+
+before_script:
+
+script:
+  - gulp build
+
+after_script:
+
+after_success:
+
+after_failure:
+
+before_archive:
+
+after_archive:
+  - echo $ARTIFACTS_UPLOAD_SUCCESSFUL
+  - echo $SHIPPABLE_ARTIFACTS_URL

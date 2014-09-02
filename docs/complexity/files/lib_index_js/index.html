@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - lib\index.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>lib\index.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">72.44</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">190</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">13.11</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">0.99</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">&#039;use strict&#039;;
+
+var path = require(&#039;path&#039;);
+var fs = require(&#039;fs&#039;);
+var _ = require(&#039;lodash&#039;);
+var mkdirp = require(&#039;mkdirp&#039;);
+var calc = require(&#039;./calculator&#039;);
+
+// These are just references to the config
+var config = null;
+var gulp = null;
+
+// These are used to store the input and output file paths
+var esPath = null;
+var costPath = null;
+
+/**
+ * Adds the cost analysis task to gulp
+ *
+ * @param {Object} gulpRef the instance of gulp to attach the task to
+ * @param {Object} conf The configuration Object
+ */
+function costSetup(gulpRef, conf) {
+  // store a reference to our parameters
+  gulp = gulpRef;
+  config = conf;
+
+  // calculate our filepaths
+  esPath = path.resolve(config.root, &#039;docs&#039;, &#039;esComplex&#039;);
+  costPath = path.resolve(config.root, &#039;docs&#039;, &#039;cost&#039;);
+
+  // register the task
+  gulp.task(&#039;cost&#039;, false, [&#039;escomplex&#039;], costTask);
+}
+
+/**
+ * Runs the cost analysis task
+ *
+ */
+function costTask() {
+  var reportList = getFileList();
+  var reportData = {};
+  var totals = {};
+
+  // get the report data from the escomplex tool
+  getReportData(reportList, reportData);
+
+  // determine size once as an optimization
+  var len = _.size(reportData);
+
+  // run our calculations
+  calc.sloc(totals, reportData, len);
+  calc.cyclomatic(totals, reportData, len);
+  calc.effort(totals, reportData, len);
+  calc.maintainability(totals, reportData, len);
+  calc.difficulty(totals, reportData, len);
+  calc.time(totals, reportData, len);
+  calc.cost(totals, len);
+  calc.bugs(totals, reportData, len);
+  calc.dependencies(totals, reportData, len);
+
+  // output the results
+  outputToHTML(totals, reportData);
+}
+
+/**
+ * Gets a list of the output files from escomplex by parsing the index.json file
+ */
+function getFileList() {
+  var indexFile = path.resolve(esPath, &#039;index.json&#039;);
+  var indexContent = fs.readFileSync(indexFile, {encoding: &#039;UTF-8&#039;});
+  indexContent = indexContent.replace(/\\/g, &#039;/&#039;);
+  var indexJson = JSON.parse(indexContent);
+  return indexJson.reports;
+}
+
+/**
+ * Loops through the report list and attaches the data for each report
+ *
+ * @param {Array} reportList The array of reports we need to get the data for
+ * @param {Object} reportData The object where the data will be stored
+ */
+function getReportData(reportList, reportData) {
+  reportList.forEach(function getReportData(file) {
+    var data = getReport(file);
+    reportData[file] = data;
+  });
+}
+
+/**
+ * Reads the file from the filesystem and returns its data
+ *
+ * @param {String} file The file to extract the JSON contents from
+ * @return {Object} reportData The parsed JSON from the file
+ */
+function getReport(file) {
+  var reportPath = path.resolve(esPath, file);
+  var reportContent = fs.readFileSync(reportPath, {encoding: &#039;UTF-8&#039;});
+  var reportData = JSON.parse(reportContent);
+  return reportData;
+}
+
+/**
+ * Outputs the results as html files
+ *
+ * @param {Object} totals The totals object used to generate the index page
+ * @param {Object} reports The reports object used to generate the file pages
+ */
+function outputToHTML(totals, reports) {
+  outputIndex(totals, reports);
+
+  _.forEach(reports, function(report, file) {
+    outputReport(file, report);
+  });
+}
+
+/**
+ * Sets up the writing of the index.html file
+ *
+ * @param {Object} totals The totals object used to generate the index page
+ * @param {Object} reports The reports object used to generate the file pages
+ */
+function outputIndex(totals, reports) {
+  // this is the path to our custom template
+  var indexTemplate = path.resolve(__dirname, &#039;../templates/costIndex.html&#039;);
+
+  var outputFile = path.resolve(costPath, &#039;index.html&#039;);
+  // setup the data structure our template expects
+  var data = {
+    totals: totals,
+    reports: reports
+  };
+
+  renderTemplate(indexTemplate, data, outputFile);
+}
+
+/**
+ * Output the individual report to html format
+ *
+ * @param {String} file The file the report is based off of
+ * @param {Object} report The data used to generate the output
+ */
+function outputReport(file, report) {
+  // this is the path to our custom template
+  var fileTemplate = path.resolve(__dirname, &#039;../templates/costFile.html&#039;);
+
+  // this is  the path to the output file
+  var baseFile = file.replace(&#039;.json&#039;, &#039;.html&#039;);
+  var outputFile = path.resolve(costPath, baseFile);
+
+  // setup the data structure our template expects
+  var data = {
+    report: report
+  };
+
+  renderTemplate(fileTemplate, data, outputFile);
+}
+
+/**
+ * Renders the template into html with the data passed in
+ *
+ * @param {String} templatePath The path to the template file
+ * @param {Object} data The data for the template
+ * @param {String} outputFile The file to be written to
+ */
+function renderTemplate(templatePath, data, outputFile) {
+  var template = fs.readFileSync(templatePath);
+  var compileTemplate = _.template(template);
+  var html = compileTemplate(data);
+
+  writeFile(html, outputFile);
+}
+
+/**
+ * Writes the file to disk
+ *
+ * If the file exists it will be overwritten
+ *
+ * @param {String|Buffer} data The data to be written to the file
+ * @param {String} fp The filepath to the file that will be written to
+ */
+function writeFile(data, fp) {
+  // make sure the directory exists
+  var dir = path.dirname(fp);
+  mkdirp.sync(dir);
+
+  fs.writeFileSync(fp, data);
+}
+
+module.exports = costSetup;</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

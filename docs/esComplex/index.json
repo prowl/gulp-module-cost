@@ -1,0 +1,14 @@
+{
+  "reports": [
+    undefined,
+    undefined,
+    undefined
+  ],
+  "baseDir": "c:\var\node\prowl\modules\gulp-module-cost\",
+  "cwd": "c:\var\node\prowl\modules\gulp-module-cost",
+  "reporterName": "gulp-escomplex-reporter-json",
+  "reporterVersion": "1.0.0",
+  "analysis": "gulp-escomplex",
+  "analysisVersion": "1.0.0",
+  "created": "2014-09-02T06:22:42.854Z"
+}

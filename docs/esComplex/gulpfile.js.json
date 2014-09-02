@@ -1,0 +1,84 @@
+{
+  "aggregate": {
+    "sloc": {
+      "logical": 12,
+      "physical": 16
+    },
+    "cyclomatic": 1,
+    "halstead": {
+      "operators": {
+        "distinct": 6,
+        "total": 19,
+        "identifiers": [
+          "var",
+          "=",
+          "()",
+          "{}",
+          ":",
+          "[]"
+        ]
+      },
+      "operands": {
+        "distinct": 24,
+        "total": 34,
+        "identifiers": [
+          "\"use strict\"",
+          "gulp",
+          "\"gulp\"",
+          "require",
+          "paths",
+          "<anonymous>",
+          "root",
+          "__dirname",
+          "soften",
+          "\"**/*.js\"",
+          "\"**/*.json\"",
+          "\"!./node_modules/**\"",
+          "\"!./docs/**\"",
+          "src",
+          "specs",
+          "\"specs/**/*.js\"",
+          "statements_threshold",
+          90,
+          "functions_threshold",
+          100,
+          "branches_threshold",
+          "lines_threshold",
+          80,
+          "\"gulp-module\""
+        ]
+      },
+      "length": 53,
+      "vocabulary": 30,
+      "difficulty": 4.25,
+      "volume": 260.0652015672515,
+      "effort": 1105.2771066608188,
+      "bugs": 0.08668840052241716,
+      "time": 61.40428370337882
+    },
+    "params": 0,
+    "line": 1,
+    "cyclomaticDensity": 8.333333333333332
+  },
+  "functions": [
+  ],
+  "dependencies": [
+    {
+      "line": 3,
+      "path": "gulp",
+      "type": "CommonJS"
+    },
+    {
+      "line": 16,
+      "path": "gulp-module",
+      "type": "CommonJS"
+    }
+  ],
+  "maintainability": 62.44307639172827,
+  "params": 0,
+  "meta": {
+    "analysis": "gulp-escomplex",
+    "analysisVersion": "1.0.0",
+    "fileName": "gulpfile.js"
+  }
+}

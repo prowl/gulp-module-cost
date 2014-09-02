@@ -1,0 +1,32 @@
+{
+  "name": "gulp-module-cost",
+  "version": "0.0.1",
+  "description": "Gulp cost module integration",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prowl/gulp-module-cost.git"
+  },
+  "keywords": [
+    "Cost",
+    "Gulp",
+    "Prowl"
+  ],
+  "author": "Joshwa Fugett <jfugett27@gmail.com> (http://thotjs.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prowl/gulp-module-cost/issues"
+  },
+  "homepage": "https://github.com/prowl/gulp-module-cost",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-module": "https://npm.fury.io/GTpAPYjxGn3jnpGRdN3L/thotjs/gulp-module/-/latest.tgz"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "mkdirp": "^0.5.0"
+  }
+}

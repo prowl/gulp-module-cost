@@ -1,0 +1,744 @@
+{
+  "aggregate": {
+    "sloc": {
+      "logical": 77,
+      "physical": 190
+    },
+    "cyclomatic": 1,
+    "halstead": {
+      "operators": {
+        "distinct": 9,
+        "total": 179,
+        "identifiers": [
+          "var",
+          "=",
+          "()",
+          "function",
+          ".",
+          "[]",
+          "{}",
+          ":",
+          "return"
+        ]
+      },
+      "operands": {
+        "distinct": 92,
+        "total": 268,
+        "identifiers": [
+          "\"use strict\"",
+          "path",
+          "\"path\"",
+          "require",
+          "fs",
+          "\"fs\"",
+          "_",
+          "\"lodash\"",
+          "mkdirp",
+          "\"mkdirp\"",
+          "calc",
+          "\"./calculator\"",
+          "config",
+          null,
+          "gulp",
+          "esPath",
+          "costPath",
+          "costSetup",
+          "gulpRef",
+          "conf",
+          "root",
+          "\"docs\"",
+          "\"esComplex\"",
+          "resolve",
+          "\"cost\"",
+          0,
+          "<anonymous>",
+          "\"escomplex\"",
+          "costTask",
+          "task",
+          "reportList",
+          "getFileList",
+          "reportData",
+          "totals",
+          "getReportData",
+          "len",
+          "size",
+          "sloc",
+          "cyclomatic",
+          "effort",
+          "maintainability",
+          "difficulty",
+          "time",
+          "cost",
+          "bugs",
+          "dependencies",
+          "outputToHTML",
+          "indexFile",
+          "\"index.json\"",
+          "indexContent",
+          "encoding",
+          "\"UTF-8\"",
+          "readFileSync",
+          {
+          },
+          "\"/\"",
+          "replace",
+          "indexJson",
+          "JSON",
+          "parse",
+          "reports",
+          "file",
+          "data",
+          "getReport",
+          "forEach",
+          "reportPath",
+          "reportContent",
+          "outputIndex",
+          "report",
+          "outputReport",
+          "indexTemplate",
+          "__dirname",
+          "\"../templates/costIndex.html\"",
+          "outputFile",
+          "\"index.html\"",
+          "renderTemplate",
+          "fileTemplate",
+          "\"../templates/costFile.html\"",
+          "baseFile",
+          "\".json\"",
+          "\".html\"",
+          "templatePath",
+          "template",
+          "compileTemplate",
+          "html",
+          "writeFile",
+          "fp",
+          "dir",
+          "dirname",
+          "sync",
+          "writeFileSync",
+          "module",
+          "exports"
+        ]
+      },
+      "length": 447,
+      "vocabulary": 101,
+      "difficulty": 13.108695652173914,
+      "volume": 2976.2205327900524,
+      "effort": 39014.36915809569,
+      "bugs": 0.9920735109300175,
+      "time": 2167.464953227538
+    },
+    "params": 19,
+    "line": 1,
+    "cyclomaticDensity": 1.2987012987012987
+  },
+  "functions": [
+    {
+      "name": "costSetup",
+      "sloc": {
+        "logical": 5,
+        "physical": 12
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 4,
+          "total": 13,
+          "identifiers": [
+            "=",
+            "()",
+            ".",
+            "[]"
+          ]
+        },
+        "operands": {
+          "distinct": 17,
+          "total": 27,
+          "identifiers": [
+            "gulpRef",
+            "conf",
+            "gulp",
+            "config",
+            "esPath",
+            "root",
+            "\"docs\"",
+            "\"esComplex\"",
+            "path",
+            "resolve",
+            "costPath",
+            "\"cost\"",
+            0,
+            "<anonymous>",
+            "\"escomplex\"",
+            "costTask",
+            "task"
+          ]
+        },
+        "length": 40,
+        "vocabulary": 21,
+        "difficulty": 3.176470588235294,
+        "volume": 175.69269691115042,
+        "effort": 558.0826843060072,
+        "bugs": 0.05856423230371681,
+        "time": 31.004593572555954
+      },
+      "params": 2,
+      "line": 23,
+      "cyclomaticDensity": 20
+    },
+    {
+      "name": "costTask",
+      "sloc": {
+        "logical": 15,
+        "physical": 25
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 5,
+          "total": 33,
+          "identifiers": [
+            "var",
+            "=",
+            "()",
+            "{}",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 20,
+          "total": 60,
+          "identifiers": [
+            "reportList",
+            "getFileList",
+            "reportData",
+            "<anonymous>",
+            "totals",
+            "getReportData",
+            "len",
+            "_",
+            "size",
+            "calc",
+            "sloc",
+            "cyclomatic",
+            "effort",
+            "maintainability",
+            "difficulty",
+            "time",
+            "cost",
+            "bugs",
+            "dependencies",
+            "outputToHTML"
+          ]
+        },
+        "length": 93,
+        "vocabulary": 25,
+        "difficulty": 7.5,
+        "volume": 431.87862564904935,
+        "effort": 3239.08969236787,
+        "bugs": 0.14395954188301646,
+        "time": 179.94942735377057
+      },
+      "params": 0,
+      "line": 40,
+      "cyclomaticDensity": 6.666666666666667
+    },
+    {
+      "name": "getFileList",
+      "sloc": {
+        "logical": 6,
+        "physical": 7
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 7,
+          "total": 19,
+          "identifiers": [
+            "var",
+            "=",
+            "()",
+            ".",
+            "{}",
+            ":",
+            "return"
+          ]
+        },
+        "operands": {
+          "distinct": 18,
+          "total": 23,
+          "identifiers": [
+            "indexFile",
+            "esPath",
+            "\"index.json\"",
+            "path",
+            "resolve",
+            "indexContent",
+            "<anonymous>",
+            "encoding",
+            "\"UTF-8\"",
+            "fs",
+            "readFileSync",
+            {
+            },
+            "\"/\"",
+            "replace",
+            "indexJson",
+            "JSON",
+            "parse",
+            "reports"
+          ]
+        },
+        "length": 42,
+        "vocabulary": 25,
+        "difficulty": 4.472222222222221,
+        "volume": 195.04195997053841,
+        "effort": 872.2709876460189,
+        "bugs": 0.06501398665684614,
+        "time": 48.45949931366771
+      },
+      "params": 0,
+      "line": 69,
+      "cyclomaticDensity": 16.666666666666664
+    },
+    {
+      "name": "getReportData",
+      "sloc": {
+        "logical": 1,
+        "physical": 6
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 3,
+          "total": 3,
+          "identifiers": [
+            "()",
+            "function",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 4,
+          "total": 5,
+          "identifiers": [
+            "reportList",
+            "reportData",
+            "getReportData",
+            "forEach"
+          ]
+        },
+        "length": 8,
+        "vocabulary": 7,
+        "difficulty": 1.875,
+        "volume": 22.458839376460833,
+        "effort": 42.11032383086406,
+        "bugs": 0.007486279792153611,
+        "time": 2.3394624350480036
+      },
+      "params": 2,
+      "line": 83,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "getReportData",
+      "sloc": {
+        "logical": 2,
+        "physical": 4
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 4,
+          "total": 5,
+          "identifiers": [
+            "var",
+            "=",
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 4,
+          "total": 7,
+          "identifiers": [
+            "file",
+            "data",
+            "getReport",
+            "reportData"
+          ]
+        },
+        "length": 12,
+        "vocabulary": 8,
+        "difficulty": 3.5,
+        "volume": 36,
+        "effort": 126,
+        "bugs": 0.012,
+        "time": 7
+      },
+      "params": 1,
+      "line": 84,
+      "cyclomaticDensity": 50
+    },
+    {
+      "name": "getReport",
+      "sloc": {
+        "logical": 5,
+        "physical": 6
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 7,
+          "total": 15,
+          "identifiers": [
+            "var",
+            "=",
+            "()",
+            ".",
+            "{}",
+            ":",
+            "return"
+          ]
+        },
+        "operands": {
+          "distinct": 14,
+          "total": 18,
+          "identifiers": [
+            "file",
+            "reportPath",
+            "esPath",
+            "path",
+            "resolve",
+            "reportContent",
+            "<anonymous>",
+            "encoding",
+            "\"UTF-8\"",
+            "fs",
+            "readFileSync",
+            "reportData",
+            "JSON",
+            "parse"
+          ]
+        },
+        "length": 33,
+        "vocabulary": 21,
+        "difficulty": 4.5,
+        "volume": 144.94647495169912,
+        "effort": 652.2591372826461,
+        "bugs": 0.048315491650566374,
+        "time": 36.23661873792478
+      },
+      "params": 1,
+      "line": 96,
+      "cyclomaticDensity": 20
+    },
+    {
+      "name": "outputToHTML",
+      "sloc": {
+        "logical": 2,
+        "physical": 7
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 3,
+          "total": 4,
+          "identifiers": [
+            "()",
+            "function",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 9,
+          "identifiers": [
+            "totals",
+            "reports",
+            "outputIndex",
+            "<anonymous>",
+            "_",
+            "forEach"
+          ]
+        },
+        "length": 13,
+        "vocabulary": 9,
+        "difficulty": 2.25,
+        "volume": 41.20902501875006,
+        "effort": 92.72030629218764,
+        "bugs": 0.013736341672916687,
+        "time": 5.151128127343758
+      },
+      "params": 2,
+      "line": 109,
+      "cyclomaticDensity": 50
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 1,
+          "total": 1,
+          "identifiers": [
+            "()"
+          ]
+        },
+        "operands": {
+          "distinct": 3,
+          "total": 5,
+          "identifiers": [
+            "report",
+            "file",
+            "outputReport"
+          ]
+        },
+        "length": 6,
+        "vocabulary": 4,
+        "difficulty": 0.8333333333333334,
+        "volume": 12,
+        "effort": 10,
+        "bugs": 0.004,
+        "time": 0.5555555555555556
+      },
+      "params": 2,
+      "line": 112,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "outputIndex",
+      "sloc": {
+        "logical": 6,
+        "physical": 13
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 6,
+          "total": 14,
+          "identifiers": [
+            "var",
+            "=",
+            "()",
+            ".",
+            "{}",
+            ":"
+          ]
+        },
+        "operands": {
+          "distinct": 13,
+          "total": 22,
+          "identifiers": [
+            "totals",
+            "reports",
+            "indexTemplate",
+            "__dirname",
+            "\"../templates/costIndex.html\"",
+            "path",
+            "resolve",
+            "outputFile",
+            "costPath",
+            "\"index.html\"",
+            "data",
+            "<anonymous>",
+            "renderTemplate"
+          ]
+        },
+        "length": 36,
+        "vocabulary": 19,
+        "difficulty": 5.076923076923077,
+        "volume": 152.92539048396907,
+        "effort": 776.3904439955352,
+        "bugs": 0.050975130161323025,
+        "time": 43.1328024441964
+      },
+      "params": 2,
+      "line": 123,
+      "cyclomaticDensity": 16.666666666666664
+    },
+    {
+      "name": "outputReport",
+      "sloc": {
+        "logical": 6,
+        "physical": 15
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 6,
+          "total": 17,
+          "identifiers": [
+            "var",
+            "=",
+            "()",
+            ".",
+            "{}",
+            ":"
+          ]
+        },
+        "operands": {
+          "distinct": 16,
+          "total": 25,
+          "identifiers": [
+            "file",
+            "report",
+            "fileTemplate",
+            "__dirname",
+            "\"../templates/costFile.html\"",
+            "path",
+            "resolve",
+            "baseFile",
+            "\".json\"",
+            "\".html\"",
+            "replace",
+            "outputFile",
+            "costPath",
+            "data",
+            "<anonymous>",
+            "renderTemplate"
+          ]
+        },
+        "length": 42,
+        "vocabulary": 22,
+        "difficulty": 4.6875,
+        "volume": 187.29612798276648,
+        "effort": 877.9505999192179,
+        "bugs": 0.06243204266092216,
+        "time": 48.77503332884544
+      },
+      "params": 2,
+      "line": 143,
+      "cyclomaticDensity": 16.666666666666664
+    },
+    {
+      "name": "renderTemplate",
+      "sloc": {
+        "logical": 4,
+        "physical": 7
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 4,
+          "total": 12,
+          "identifiers": [
+            "var",
+            "=",
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 10,
+          "total": 17,
+          "identifiers": [
+            "templatePath",
+            "data",
+            "outputFile",
+            "template",
+            "fs",
+            "readFileSync",
+            "compileTemplate",
+            "_",
+            "html",
+            "writeFile"
+          ]
+        },
+        "length": 29,
+        "vocabulary": 14,
+        "difficulty": 3.4,
+        "volume": 110.41329273967051,
+        "effort": 375.40519531487973,
+        "bugs": 0.0368044309132235,
+        "time": 20.855844184159984
+      },
+      "params": 3,
+      "line": 166,
+      "cyclomaticDensity": 25
+    },
+    {
+      "name": "writeFile",
+      "sloc": {
+        "logical": 3,
+        "physical": 7
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 4,
+          "total": 8,
+          "identifiers": [
+            "var",
+            "=",
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 9,
+          "total": 13,
+          "identifiers": [
+            "data",
+            "fp",
+            "dir",
+            "path",
+            "dirname",
+            "mkdirp",
+            "sync",
+            "fs",
+            "writeFileSync"
+          ]
+        },
+        "length": 21,
+        "vocabulary": 13,
+        "difficulty": 2.888888888888889,
+        "volume": 77.70923408096293,
+        "effort": 224.49334290055958,
+        "bugs": 0.025903078026987644,
+        "time": 12.471852383364421
+      },
+      "params": 2,
+      "line": 182,
+      "cyclomaticDensity": 33.33333333333333
+    }
+  ],
+  "dependencies": [
+    {
+      "line": 3,
+      "path": "path",
+      "type": "CommonJS"
+    },
+    {
+      "line": 4,
+      "path": "fs",
+      "type": "CommonJS"
+    },
+    {
+      "line": 5,
+      "path": "lodash",
+      "type": "CommonJS"
+    },
+    {
+      "line": 6,
+      "path": "mkdirp",
+      "type": "CommonJS"
+    },
+    {
+      "line": 7,
+      "path": "./calculator",
+      "type": "CommonJS"
+    }
+  ],
+  "maintainability": 72.44040822399198,
+  "params": 1.5833333333333333,
+  "meta": {
+    "analysis": "gulp-escomplex",
+    "analysisVersion": "1.0.0",
+    "fileName": "lib\index.js"
+  }
+}
