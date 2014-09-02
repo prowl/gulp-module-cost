@@ -1,6 +1,6 @@
 {
   "name": "gulp-module-cost",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Gulp cost module integration",
   "main": "lib/index.js",
   "scripts": {

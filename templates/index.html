@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Estimated Cost Analysis</title>
+  <style type="text/css">
+    body {
+      background-color: #348;
+    }
+
+    table {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      background-color: #003;
+      padding: 0;
+    }
+
+    td {
+      border-right: 1px solid #C1DAD7;
+      border-bottom: 1px solid #C1DAD7;
+      padding: 6px 6px 6px 12px;
+      color: #447777;
+    }
+
+    .header td{
+      background-color: #ddd;
+    }
+
+    tr {
+      background-color: #fff;
+    }
+
+    tr:nth-child(2n+1){
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+<p style="color: #FFF700">These metrics are not meant to be used as law but are a relative measure of the quality
+  and cost of a program</p>
+<table>
+  <tr class="header">
+    <td>Metric</td>
+    <td>Value</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td<%
+    if(totals.average_maintainability <= 40) {
+    %> style="color: #f00;"<%
+    }
+    if(totals.average_maintainability >= 80) {
+    %> style="color: #0f0;"<%
+    }
+    %>>Average Maintainability</td>
+    <td<%
+    if(totals.average_maintainability <= 40) {
+    %> style="color: #f00;"<%
+    }
+    if(totals.average_maintainability >= 80) {
+    %> style="color: #0f0;"<%
+    }
+    %>><%- totals.average_maintainability %></td>
+    <td>This is the relative maintainability of a program on a scale of 0-100. Higher is better.</td>
+  </tr>
+  <tr>
+    <td>Average Difficulty</td>
+    <td><%- totals.average_difficulty %></td>
+    <td>This is a measure of how difficult it is to understand the code. Lower is better.</td>
+  </tr>
+  <tr>
+    <td>Total Cyclomatic Complexity</td>
+    <td><%- totals.total_cyclomatic_complexity %></td>
+    <td>This is how complex the code is based on the number of paths through the code. Lower is better.</td>
+  </tr>
+  <tr>
+    <td<%
+    if(totals.average_cyclomatic_complexity >= 5) {
+    %> style="color: #f00;"<%
+    }
+    if(totals.average_cyclomatic_complexity <= 2) {
+    %> style="color: #0f0;"<%
+    }
+    %>>Average Cyclomatic Complexity</td>
+    <td<%
+    if(totals.average_cyclomatic_complexity >= 5) {
+    %> style="color: #f00;"<%
+    }
+    if(totals.average_cyclomatic_complexity <= 2) {
+    %> style="color: #0f0;"<%
+    }
+    %>><%- totals.average_cyclomatic_complexity %></td>
+    <td>This is the total complexity for the program from above.</td>
+  </tr>
+  <tr>
+    <td>Average Cyclomatic Density</td>
+    <td><%- totals.average_cyclomatic_density %></td>
+    <td>This is a re-expression of the above metric as a percentage based on the lines of code. Lower is better.</td>
+  </tr>
+  <tr>
+    <td>Average Effort</td>
+    <td><%- totals.average_effort %></td>
+    <td>This is the amount of effort needed to write the code based on it's difficulty and length</td>
+  </tr>
+  <tr>
+    <td>Total Effort</td>
+    <td><%- totals.total_effort %></td>
+    <td>This is the total of the effort needed across the program.</td>
+  </tr>
+  <tr>
+    <td>Average Time</td>
+    <td><%- (totals.average_time / 60 / 60).toFixed(2) %> Hours</td>
+    <td>This is the estimated amount of time needed to write the software based on the effort required.</td>
+  </tr>
+  <tr>
+    <td>Total Time</td>
+    <td><%- (totals.total_time / 60 / 60).toFixed(2) %> Hours</td>
+    <td>This is the estimated amount of time needed to write the software based on the effort required.</td>
+  </tr>
+  <tr>
+    <td>Average Cost</td>
+    <td>$<%- totals.average_cost %></td>
+    <td>This is the estimated cost to develop the software based on the time needed to develop it.</td>
+  </tr>
+  <tr>
+    <td>Total Cost</td>
+    <td>$<%- totals.total_cost %></td>
+    <td>This is the estimated cost to develop the software based on the time needed to develop it.</td>
+  </tr>
+  <tr>
+    <td<%
+    if(totals.average_bugs >= 2) {
+    %> style="color: #f00;"<%
+    }
+    if(totals.average_bugs <= 0.5) {
+    %> style="color: #0f0;"<%
+    }
+    %>>Average Bugs</td>
+    <td<%
+    if(totals.average_bugs >= 2) {
+    %> style="color: #f00;"<%
+    }
+    if(totals.average_bugs <= 0.5) {
+    %> style="color: #0f0;"<%
+    }
+    %>><%- totals.average_bugs %></td>
+    <td>This is the estimated number of bugs per file based on their length and complexity.</td>
+  </tr>
+  <tr>
+    <td>Total Bugs</td>
+    <td><%- totals.total_bugs %></td>
+    <td>This is the estimated number of bugs in the software.</td>
+  </tr>
+  <tr>
+    <td<%
+    if(totals.average_logical_sloc >= 200) {
+    %> style="color: #f00;"<%
+    }
+    %>>Average Logical SLOC</td>
+    <td<%
+    if(totals.average_logical_sloc >= 200) {
+    %> style="color: #f00;"<%
+    }
+    %>><%- totals.average_logical_sloc %></td>
+    <td>This is the number of lines of software that are considered logic.</td>
+  </tr>
+  <tr>
+    <td>Total Logical SLOC</td>
+    <td><%- totals.total_logical_sloc %></td>
+    <td>This is the number of lines of software that are considered logic.</td>
+  </tr>
+  <tr>
+    <td>Average Physical SLOC</td>
+    <td><%- totals.average_physical_sloc %></td>
+    <td>This is the total lines of source code including up to 25% whitespace, but ignoring excessive formatting.</td>
+  </tr>
+  <tr>
+    <td>Total Physical SLOC</td>
+    <td><%- totals.total_physical_sloc %></td>
+    <td>This is the total lines of source code including up to 25% whitespace, but ignoring excessive formatting.</td>
+  </tr>
+  <tr>
+    <td>Average Dependencies</td>
+    <td><%- totals.average_dependencies %></td>
+    <td>This is the average number of dependencies per file in the program.</td>
+  </tr>
+  <tr>
+    <td>Total Dependencies</td>
+    <td><%- totals.total_dependencies %></td>
+    <td>This is the total Number of dependencies in the software.)</td>
+  </tr>
+</table>
+
+<table>
+  <tr class="header">
+    <td>File Details</td>
+  </tr>
+  <% _.forEach(reports, function(obj, file){
+  var fp = file.replace('.json', '');
+  %><tr>
+  <td><a href="<%- fp %>.html"><%- fp %></a></td>
+</tr><%
+  }); %>
+</table>
+</body>
+</html>
