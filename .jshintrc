@@ -30,5 +30,9 @@
   "browser": true,
   "node": true,
   "nonstandard": true,
-  "worker": true
+  "worker": true,
+  "globals": {
+    "describe": false,
+    "it": false
+  }
 }
