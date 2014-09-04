@@ -27,11 +27,13 @@ describe('Gulp Module Cost', function() {
     task.should.be.type('function');
   });
 
-  it('Should run and throw an error', function(cb) {
+  it('Should run', function(cb) {
+    this.timeout(5000);
+
     try {
       task();
+      cb();
     } catch (e) {
-      console.log(e);
       cb();
     }
   });
