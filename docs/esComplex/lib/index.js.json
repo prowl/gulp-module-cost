@@ -1,14 +1,14 @@
 {
   "aggregate": {
     "sloc": {
-      "logical": 77,
-      "physical": 190
+      "logical": 79,
+      "physical": 192
     },
     "cyclomatic": 1,
     "halstead": {
       "operators": {
         "distinct": 9,
-        "total": 179,
+        "total": 185,
         "identifiers": [
           "var",
           "=",
@@ -22,8 +22,8 @@
         ]
       },
       "operands": {
-        "distinct": 92,
-        "total": 268,
+        "distinct": 95,
+        "total": 278,
         "identifiers": [
           "\"use strict\"",
           "path",
@@ -92,12 +92,17 @@
           "forEach",
           "reportPath",
           "reportContent",
+          {
+          },
+          "\"\"",
+          {
+          },
           "outputIndex",
           "report",
           "outputReport",
           "indexTemplate",
           "__dirname",
-          "\"../templates/costIndex.html\"",
+          "\"../templates/index.html\"",
           "outputFile",
           "\"index.html\"",
           "renderTemplate",
@@ -120,17 +125,17 @@
           "exports"
         ]
       },
-      "length": 447,
-      "vocabulary": 101,
-      "difficulty": 13.108695652173914,
-      "volume": 2976.2205327900524,
-      "effort": 39014.36915809569,
-      "bugs": 0.9920735109300175,
-      "time": 2167.464953227538
+      "length": 463,
+      "vocabulary": 104,
+      "difficulty": 13.16842105263158,
+      "volume": 3102.3035894993254,
+      "effort": 40852.439899617435,
+      "bugs": 1.034101196499775,
+      "time": 2269.579994423191
     },
     "params": 19,
     "line": 1,
-    "cyclomaticDensity": 1.2987012987012987
+    "cyclomaticDensity": 1.2658227848101267
   },
   "functions": [
     {
@@ -383,14 +388,14 @@
     {
       "name": "getReport",
       "sloc": {
-        "logical": 5,
-        "physical": 6
+        "logical": 7,
+        "physical": 8
       },
       "cyclomatic": 1,
       "halstead": {
         "operators": {
           "distinct": 7,
-          "total": 15,
+          "total": 21,
           "identifiers": [
             "var",
             "=",
@@ -402,8 +407,8 @@
           ]
         },
         "operands": {
-          "distinct": 14,
-          "total": 18,
+          "distinct": 19,
+          "total": 28,
           "identifiers": [
             "file",
             "reportPath",
@@ -416,22 +421,29 @@
             "\"UTF-8\"",
             "fs",
             "readFileSync",
+            {
+            },
+            "\"\"",
+            "replace",
+            {
+            },
+            "\"/\"",
             "reportData",
             "JSON",
             "parse"
           ]
         },
-        "length": 33,
-        "vocabulary": 21,
-        "difficulty": 4.5,
-        "volume": 144.94647495169912,
-        "effort": 652.2591372826461,
-        "bugs": 0.048315491650566374,
-        "time": 36.23661873792478
+        "length": 49,
+        "vocabulary": 26,
+        "difficulty": 5.157894736842105,
+        "volume": 230.32154618891354,
+        "effort": 1187.974290869133,
+        "bugs": 0.07677384872963784,
+        "time": 65.99857171495184
       },
       "params": 1,
       "line": 96,
-      "cyclomaticDensity": 20
+      "cyclomaticDensity": 14.285714285714285
     },
     {
       "name": "outputToHTML",
@@ -471,7 +483,7 @@
         "time": 5.151128127343758
       },
       "params": 2,
-      "line": 109,
+      "line": 111,
       "cyclomaticDensity": 50
     },
     {
@@ -507,7 +519,7 @@
         "time": 0.5555555555555556
       },
       "params": 2,
-      "line": 112,
+      "line": 114,
       "cyclomaticDensity": 100
     },
     {
@@ -538,7 +550,7 @@
             "reports",
             "indexTemplate",
             "__dirname",
-            "\"../templates/costIndex.html\"",
+            "\"../templates/index.html\"",
             "path",
             "resolve",
             "outputFile",
@@ -558,7 +570,7 @@
         "time": 43.1328024441964
       },
       "params": 2,
-      "line": 123,
+      "line": 125,
       "cyclomaticDensity": 16.666666666666664
     },
     {
@@ -612,7 +624,7 @@
         "time": 48.77503332884544
       },
       "params": 2,
-      "line": 143,
+      "line": 145,
       "cyclomaticDensity": 16.666666666666664
     },
     {
@@ -658,7 +670,7 @@
         "time": 20.855844184159984
       },
       "params": 3,
-      "line": 166,
+      "line": 168,
       "cyclomaticDensity": 25
     },
     {
@@ -703,7 +715,7 @@
         "time": 12.471852383364421
       },
       "params": 2,
-      "line": 182,
+      "line": 184,
       "cyclomaticDensity": 33.33333333333333
     }
   ],
@@ -734,11 +746,11 @@
       "type": "CommonJS"
     }
   ],
-  "maintainability": 72.44040822399198,
+  "maintainability": 71.97587929360513,
   "params": 1.5833333333333333,
   "meta": {
     "analysis": "gulp-escomplex",
     "analysisVersion": "1.0.0",
-    "fileName": "lib\index.js"
+    "fileName": "lib/index.js"
   }
 }

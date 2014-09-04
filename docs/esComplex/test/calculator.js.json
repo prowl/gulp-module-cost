@@ -1,0 +1,2152 @@
+{
+  "aggregate": {
+    "sloc": {
+      "logical": 124,
+      "physical": 236
+    },
+    "cyclomatic": 1,
+    "halstead": {
+      "operators": {
+        "distinct": 8,
+        "total": 324,
+        "identifiers": [
+          "var",
+          "=",
+          "()",
+          "{}",
+          "[]",
+          ":",
+          "function",
+          "."
+        ]
+      },
+      "operands": {
+        "distinct": 131,
+        "total": 450,
+        "identifiers": [
+          "\"use strict\"",
+          "should",
+          "\"should\"",
+          "require",
+          "calc",
+          "\"../lib/calculator\"",
+          "totals",
+          "<anonymous>",
+          "reports",
+          "aggregate",
+          "sloc",
+          "logical",
+          100,
+          "physical",
+          110,
+          "cyclomatic",
+          1,
+          "cyclomaticDensity",
+          5,
+          "halstead",
+          "effort",
+          3,
+          "difficulty",
+          "time",
+          2400,
+          "bugs",
+          0.5,
+          "maintainability",
+          90,
+          "dependencies",
+          "path",
+          "\"dep1\"",
+          "\"dep2\"",
+          50,
+          4800,
+          1.5,
+          "\"dep3\"",
+          "len",
+          2,
+          "\"Calculator\"",
+          "\"Should return an object\"",
+          "\"object\"",
+          "be",
+          "type",
+          "it",
+          "\"SLOC\"",
+          "\"Should have a method sloc\"",
+          "\"function\"",
+          "\"Should run the sloc method\"",
+          "\"Should have an accurate physical sloc\"",
+          200,
+          "total_physical_sloc",
+          "equal",
+          "\"Should have an accurate logical sloc\"",
+          150,
+          "total_logical_sloc",
+          "\"Should have an accurate average physical sloc\"",
+          "\"100\"",
+          "average_physical_sloc",
+          "\"Should have an accurate average logical sloc\"",
+          "\"75\"",
+          "average_logical_sloc",
+          "describe",
+          "\"Cyclomatic\"",
+          "\"Should have a method cyclomatic\"",
+          "\"Should run the complexity method\"",
+          "\"Should have an accurate total cyclomatic complexity\"",
+          "total_cyclomatic_complexity",
+          "\"Should have an accurate average cyclomatic complexity\"",
+          "\"1.00\"",
+          "average_cyclomatic_complexity",
+          "\"Should have an accurate average cyclomatic density\"",
+          "\"5.00\"",
+          "average_cyclomatic_density",
+          "\"Effort\"",
+          "\"Should have a method effort\"",
+          "\"Should run the effort method\"",
+          "\"Should have an accurate total_effort\"",
+          "\"6.00\"",
+          "total_effort",
+          "\"Should have an accurate average_effort\"",
+          "\"3.00\"",
+          "average_effort",
+          "\"Maintainability\"",
+          "\"Should have a method maintainability\"",
+          "\"Should run the maintainability method\"",
+          "\"Should have an accurate average maintainability\"",
+          "\"100.00\"",
+          "average_maintainability",
+          "\"Difficulty\"",
+          "\"Should have a method difficulty\"",
+          "\"Should run the difficulty method\"",
+          "\"Should have an accurate average difficulty\"",
+          "\"2.00\"",
+          "average_difficulty",
+          "\"Time\"",
+          "\"Should have a method time\"",
+          "\"Should run the time method\"",
+          "\"Should have an accurate total time\"",
+          "\"7200.00\"",
+          "total_time",
+          "\"Should have an accurate average time\"",
+          "\"3600.00\"",
+          "average_time",
+          "\"Cost\"",
+          "\"Should have a method cost\"",
+          "cost",
+          "\"Should run the cost method\"",
+          "\"Should have an accurate total cost\"",
+          "\"93.60\"",
+          "total_cost",
+          "\"Should have an accurate average cost\"",
+          "\"46.80\"",
+          "average_cost",
+          "\"Bugs\"",
+          "\"Should have a method bugs\"",
+          "\"Should run the bugs method\"",
+          "\"Should have an accurate total_bugs\"",
+          "total_bugs",
+          "\"Should have an accurate average_bugs\"",
+          "average_bugs",
+          "\"Dependencies\"",
+          "\"Should have a method dependencies\"",
+          "\"Should run the dependencies method\"",
+          "\"Should have an array of dependencies\"",
+          "length",
+          "\"Should have an accurate total dependencies count\"",
+          "total_dependencies",
+          "\"Should have an accurate average dependencies count\"",
+          "\"1.50\"",
+          "average_dependencies"
+        ]
+      },
+      "length": 774,
+      "vocabulary": 139,
+      "difficulty": 13.740458015267176,
+      "volume": 5510.060390287995,
+      "effort": 75710.75345433886,
+      "bugs": 1.836686796762665,
+      "time": 4206.152969685492
+    },
+    "params": 0,
+    "line": 1,
+    "cyclomaticDensity": 0.8064516129032258
+  },
+  "functions": [
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 10,
+        "physical": 175
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 20,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 13,
+          "total": 30,
+          "identifiers": [
+            "\"Should return an object\"",
+            "<anonymous>",
+            "it",
+            "\"SLOC\"",
+            "describe",
+            "\"Cyclomatic\"",
+            "\"Effort\"",
+            "\"Maintainability\"",
+            "\"Difficulty\"",
+            "\"Time\"",
+            "\"Cost\"",
+            "\"Bugs\"",
+            "\"Dependencies\""
+          ]
+        },
+        "length": 50,
+        "vocabulary": 15,
+        "difficulty": 2.3076923076923075,
+        "volume": 195.34452978042594,
+        "effort": 450.79506872405983,
+        "bugs": 0.06511484326014198,
+        "time": 25.04417048466999
+      },
+      "params": 0,
+      "line": 62,
+      "cyclomaticDensity": 10
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 4,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "\"object\"",
+            "calc",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 9,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 25.26619429851844,
+        "effort": 25.26619429851844,
+        "bugs": 0.008422064766172813,
+        "time": 1.403677461028802
+      },
+      "params": 0,
+      "line": 63,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 6,
+        "physical": 25
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 12,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 8,
+          "total": 18,
+          "identifiers": [
+            "\"Should have a method sloc\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the sloc method\"",
+            "\"Should have an accurate physical sloc\"",
+            "\"Should have an accurate logical sloc\"",
+            "\"Should have an accurate average physical sloc\"",
+            "\"Should have an accurate average logical sloc\""
+          ]
+        },
+        "length": 30,
+        "vocabulary": 10,
+        "difficulty": 2.25,
+        "volume": 99.65784284662088,
+        "effort": 224.23014640489697,
+        "bugs": 0.03321928094887363,
+        "time": 12.45723035582761
+      },
+      "params": 0,
+      "line": 67,
+      "cyclomaticDensity": 16.666666666666664
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "sloc",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 68,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "totals",
+            "reports",
+            "len",
+            "calc",
+            "sloc"
+          ]
+        },
+        "length": 7,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 19.651484454403228,
+        "effort": 19.651484454403228,
+        "bugs": 0.00655049481813441,
+        "time": 1.0917491363557348
+      },
+      "params": 0,
+      "line": 72,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            200,
+            "totals",
+            "total_physical_sloc",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 76,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            150,
+            "totals",
+            "total_logical_sloc",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 80,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"100\"",
+            "totals",
+            "average_physical_sloc",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 84,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"75\"",
+            "totals",
+            "average_logical_sloc",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 88,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 5,
+        "physical": 21
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 10,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 7,
+          "total": 15,
+          "identifiers": [
+            "\"Should have a method cyclomatic\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the complexity method\"",
+            "\"Should have an accurate total cyclomatic complexity\"",
+            "\"Should have an accurate average cyclomatic complexity\"",
+            "\"Should have an accurate average cyclomatic density\""
+          ]
+        },
+        "length": 25,
+        "vocabulary": 9,
+        "difficulty": 2.142857142857143,
+        "volume": 79.24812503605781,
+        "effort": 169.81741079155245,
+        "bugs": 0.02641604167868594,
+        "time": 9.434300599530692
+      },
+      "params": 0,
+      "line": 93,
+      "cyclomaticDensity": 20
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "cyclomatic",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 94,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "totals",
+            "reports",
+            "len",
+            "calc",
+            "cyclomatic"
+          ]
+        },
+        "length": 7,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 19.651484454403228,
+        "effort": 19.651484454403228,
+        "bugs": 0.00655049481813441,
+        "time": 1.0917491363557348
+      },
+      "params": 0,
+      "line": 98,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            2,
+            "totals",
+            "total_cyclomatic_complexity",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 102,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"1.00\"",
+            "totals",
+            "average_cyclomatic_complexity",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 106,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"5.00\"",
+            "totals",
+            "average_cyclomatic_density",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 110,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 4,
+        "physical": 17
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 8,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 12,
+          "identifiers": [
+            "\"Should have a method effort\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the effort method\"",
+            "\"Should have an accurate total_effort\"",
+            "\"Should have an accurate average_effort\""
+          ]
+        },
+        "length": 20,
+        "vocabulary": 8,
+        "difficulty": 2,
+        "volume": 60,
+        "effort": 120,
+        "bugs": 0.02,
+        "time": 6.666666666666667
+      },
+      "params": 0,
+      "line": 115,
+      "cyclomaticDensity": 25
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "effort",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 116,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "totals",
+            "reports",
+            "len",
+            "calc",
+            "effort"
+          ]
+        },
+        "length": 7,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 19.651484454403228,
+        "effort": 19.651484454403228,
+        "bugs": 0.00655049481813441,
+        "time": 1.0917491363557348
+      },
+      "params": 0,
+      "line": 120,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"6.00\"",
+            "totals",
+            "total_effort",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 124,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"3.00\"",
+            "totals",
+            "average_effort",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 128,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 3,
+        "physical": 13
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 6,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 9,
+          "identifiers": [
+            "\"Should have a method maintainability\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the maintainability method\"",
+            "\"Should have an accurate average maintainability\""
+          ]
+        },
+        "length": 15,
+        "vocabulary": 7,
+        "difficulty": 1.8,
+        "volume": 42.11032383086406,
+        "effort": 75.79858289555531,
+        "bugs": 0.01403677461028802,
+        "time": 4.2110323830864065
+      },
+      "params": 0,
+      "line": 133,
+      "cyclomaticDensity": 33.33333333333333
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "maintainability",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 134,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "totals",
+            "reports",
+            "len",
+            "calc",
+            "maintainability"
+          ]
+        },
+        "length": 7,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 19.651484454403228,
+        "effort": 19.651484454403228,
+        "bugs": 0.00655049481813441,
+        "time": 1.0917491363557348
+      },
+      "params": 0,
+      "line": 138,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"100.00\"",
+            "totals",
+            "average_maintainability",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 142,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 3,
+        "physical": 13
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 6,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 9,
+          "identifiers": [
+            "\"Should have a method difficulty\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the difficulty method\"",
+            "\"Should have an accurate average difficulty\""
+          ]
+        },
+        "length": 15,
+        "vocabulary": 7,
+        "difficulty": 1.8,
+        "volume": 42.11032383086406,
+        "effort": 75.79858289555531,
+        "bugs": 0.01403677461028802,
+        "time": 4.2110323830864065
+      },
+      "params": 0,
+      "line": 147,
+      "cyclomaticDensity": 33.33333333333333
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "difficulty",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 148,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "totals",
+            "reports",
+            "len",
+            "calc",
+            "difficulty"
+          ]
+        },
+        "length": 7,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 19.651484454403228,
+        "effort": 19.651484454403228,
+        "bugs": 0.00655049481813441,
+        "time": 1.0917491363557348
+      },
+      "params": 0,
+      "line": 152,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"2.00\"",
+            "totals",
+            "average_difficulty",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 156,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 4,
+        "physical": 17
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 8,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 12,
+          "identifiers": [
+            "\"Should have a method time\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the time method\"",
+            "\"Should have an accurate total time\"",
+            "\"Should have an accurate average time\""
+          ]
+        },
+        "length": 20,
+        "vocabulary": 8,
+        "difficulty": 2,
+        "volume": 60,
+        "effort": 120,
+        "bugs": 0.02,
+        "time": 6.666666666666667
+      },
+      "params": 0,
+      "line": 161,
+      "cyclomaticDensity": 25
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "time",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 162,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "totals",
+            "reports",
+            "len",
+            "calc",
+            "time"
+          ]
+        },
+        "length": 7,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 19.651484454403228,
+        "effort": 19.651484454403228,
+        "bugs": 0.00655049481813441,
+        "time": 1.0917491363557348
+      },
+      "params": 0,
+      "line": 166,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"7200.00\"",
+            "totals",
+            "total_time",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 170,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"3600.00\"",
+            "totals",
+            "average_time",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 174,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 4,
+        "physical": 17
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 8,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 12,
+          "identifiers": [
+            "\"Should have a method cost\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the cost method\"",
+            "\"Should have an accurate total cost\"",
+            "\"Should have an accurate average cost\""
+          ]
+        },
+        "length": 20,
+        "vocabulary": 8,
+        "difficulty": 2,
+        "volume": 60,
+        "effort": 120,
+        "bugs": 0.02,
+        "time": 6.666666666666667
+      },
+      "params": 0,
+      "line": 179,
+      "cyclomaticDensity": 25
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "cost",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 180,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 4,
+          "total": 4,
+          "identifiers": [
+            "totals",
+            "len",
+            "calc",
+            "cost"
+          ]
+        },
+        "length": 6,
+        "vocabulary": 6,
+        "difficulty": 1,
+        "volume": 15.509775004326936,
+        "effort": 15.509775004326936,
+        "bugs": 0.005169925001442312,
+        "time": 0.861654166907052
+      },
+      "params": 0,
+      "line": 184,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"93.60\"",
+            "totals",
+            "total_cost",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 188,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"46.80\"",
+            "totals",
+            "average_cost",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 192,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 4,
+        "physical": 17
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 8,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 12,
+          "identifiers": [
+            "\"Should have a method bugs\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the bugs method\"",
+            "\"Should have an accurate total_bugs\"",
+            "\"Should have an accurate average_bugs\""
+          ]
+        },
+        "length": 20,
+        "vocabulary": 8,
+        "difficulty": 2,
+        "volume": 60,
+        "effort": 120,
+        "bugs": 0.02,
+        "time": 6.666666666666667
+      },
+      "params": 0,
+      "line": 197,
+      "cyclomaticDensity": 25
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "bugs",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 198,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "totals",
+            "reports",
+            "len",
+            "calc",
+            "bugs"
+          ]
+        },
+        "length": 7,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 19.651484454403228,
+        "effort": 19.651484454403228,
+        "bugs": 0.00655049481813441,
+        "time": 1.0917491363557348
+      },
+      "params": 0,
+      "line": 202,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"2.00\"",
+            "totals",
+            "total_bugs",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 206,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"1.00\"",
+            "totals",
+            "average_bugs",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 210,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 5,
+        "physical": 21
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 10,
+          "identifiers": [
+            "()",
+            "function"
+          ]
+        },
+        "operands": {
+          "distinct": 7,
+          "total": 15,
+          "identifiers": [
+            "\"Should have a method dependencies\"",
+            "<anonymous>",
+            "it",
+            "\"Should run the dependencies method\"",
+            "\"Should have an array of dependencies\"",
+            "\"Should have an accurate total dependencies count\"",
+            "\"Should have an accurate average dependencies count\""
+          ]
+        },
+        "length": 25,
+        "vocabulary": 9,
+        "difficulty": 2.142857142857143,
+        "volume": 79.24812503605781,
+        "effort": 169.81741079155245,
+        "bugs": 0.02641604167868594,
+        "time": 9.434300599530692
+      },
+      "params": 0,
+      "line": 215,
+      "cyclomaticDensity": 20
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"function\"",
+            "calc",
+            "dependencies",
+            "should",
+            "be",
+            "type"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 216,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 2,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 5,
+          "total": 5,
+          "identifiers": [
+            "totals",
+            "reports",
+            "len",
+            "calc",
+            "dependencies"
+          ]
+        },
+        "length": 7,
+        "vocabulary": 7,
+        "difficulty": 1,
+        "volume": 19.651484454403228,
+        "effort": 19.651484454403228,
+        "bugs": 0.00655049481813441,
+        "time": 1.0917491363557348
+      },
+      "params": 0,
+      "line": 220,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 6,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 7,
+          "total": 7,
+          "identifiers": [
+            3,
+            "totals",
+            "dependencies",
+            "length",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 13,
+        "vocabulary": 9,
+        "difficulty": 1,
+        "volume": 41.20902501875006,
+        "effort": 41.20902501875006,
+        "bugs": 0.013736341672916687,
+        "time": 2.289390278819448
+      },
+      "params": 0,
+      "line": 224,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            3,
+            "totals",
+            "total_dependencies",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 228,
+      "cyclomaticDensity": 100
+    },
+    {
+      "name": "<anonymous>",
+      "sloc": {
+        "logical": 1,
+        "physical": 3
+      },
+      "cyclomatic": 1,
+      "halstead": {
+        "operators": {
+          "distinct": 2,
+          "total": 5,
+          "identifiers": [
+            "()",
+            "."
+          ]
+        },
+        "operands": {
+          "distinct": 6,
+          "total": 6,
+          "identifiers": [
+            "\"1.50\"",
+            "totals",
+            "average_dependencies",
+            "should",
+            "be",
+            "equal"
+          ]
+        },
+        "length": 11,
+        "vocabulary": 8,
+        "difficulty": 1,
+        "volume": 33,
+        "effort": 33,
+        "bugs": 0.011,
+        "time": 1.8333333333333333
+      },
+      "params": 0,
+      "line": 232,
+      "cyclomaticDensity": 100
+    }
+  ],
+  "dependencies": [
+    {
+      "line": 3,
+      "path": "should",
+      "type": "CommonJS"
+    },
+    {
+      "line": 5,
+      "path": "../lib/calculator",
+      "type": "CommonJS"
+    }
+  ],
+  "maintainability": 86.46342294889932,
+  "params": 0,
+  "meta": {
+    "analysis": "gulp-escomplex",
+    "analysisVersion": "1.0.0",
+    "fileName": "test/calculator.js"
+  }
+}

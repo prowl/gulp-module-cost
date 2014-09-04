@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - test/calculator.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>test/calculator.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">86.46</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">236</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">13.74</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">1.84</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">&#039;use strict&#039;;
+
+var should = require(&#039;should&#039;); // jshint ignore:line
+
+var calc = require(&#039;../lib/calculator&#039;);
+
+var totals = {};
+var reports = [
+  {
+    aggregate: {
+      sloc: {
+        logical: 100,
+        physical: 110
+      },
+      cyclomatic: 1,
+      cyclomaticDensity: 5,
+      halstead: {
+        effort: 3,
+        difficulty: 3,
+        time: 2400,
+        bugs: 0.5
+      }
+    },
+    maintainability: 90,
+    dependencies: [
+      {
+        path: &#039;dep1&#039;
+      },
+      {
+        path: &#039;dep2&#039;
+      }
+    ]
+  },
+  {
+    aggregate: {
+      sloc: {
+        logical: 50,
+        physical: 90
+      },
+      cyclomatic: 1,
+      cyclomaticDensity: 5,
+      halstead: {
+        effort: 3,
+        difficulty: 1,
+        time: 4800,
+        bugs: 1.5
+      }
+    },
+    maintainability: 110,
+    dependencies: [
+      {
+        path: &#039;dep1&#039;
+      },
+      {
+        path: &#039;dep3&#039;
+      }
+    ]
+  }
+];
+var len = 2;
+
+describe(&#039;Calculator&#039;, function() {
+  it(&#039;Should return an object&#039;, function() {
+    calc.should.be.type(&#039;object&#039;);
+  });
+
+  describe(&#039;SLOC&#039;, function() {
+    it(&#039;Should have a method sloc&#039;, function() {
+      calc.sloc.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the sloc method&#039;, function() {
+      calc.sloc(totals, reports, len);
+    });
+
+    it(&#039;Should have an accurate physical sloc&#039;, function() {
+      totals.total_physical_sloc.should.be.equal(200);
+    });
+
+    it(&#039;Should have an accurate logical sloc&#039;, function() {
+      totals.total_logical_sloc.should.be.equal(150);
+    });
+
+    it(&#039;Should have an accurate average physical sloc&#039;, function() {
+      totals.average_physical_sloc.should.be.equal(&#039;100&#039;);
+    });
+
+    it(&#039;Should have an accurate average logical sloc&#039;, function() {
+      totals.average_logical_sloc.should.be.equal(&#039;75&#039;);
+    });
+  });
+
+  describe(&#039;Cyclomatic&#039;, function() {
+    it(&#039;Should have a method cyclomatic&#039;, function() {
+      calc.cyclomatic.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the complexity method&#039;, function() {
+      calc.cyclomatic(totals, reports, len);
+    });
+
+    it(&#039;Should have an accurate total cyclomatic complexity&#039;, function() {
+      totals.total_cyclomatic_complexity.should.be.equal(2);
+    });
+
+    it(&#039;Should have an accurate average cyclomatic complexity&#039;, function() {
+      totals.average_cyclomatic_complexity.should.be.equal(&#039;1.00&#039;);
+    });
+
+    it(&#039;Should have an accurate average cyclomatic density&#039;, function() {
+      totals.average_cyclomatic_density.should.be.equal(&#039;5.00&#039;);
+    });
+  });
+
+  describe(&#039;Effort&#039;, function() {
+    it(&#039;Should have a method effort&#039;, function() {
+      calc.effort.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the effort method&#039;, function() {
+      calc.effort(totals, reports, len);
+    });
+
+    it(&#039;Should have an accurate total_effort&#039;, function() {
+      totals.total_effort.should.be.equal(&#039;6.00&#039;);
+    });
+
+    it(&#039;Should have an accurate average_effort&#039;, function() {
+      totals.average_effort.should.be.equal(&#039;3.00&#039;);
+    });
+  });
+
+  describe(&#039;Maintainability&#039;, function() {
+    it(&#039;Should have a method maintainability&#039;, function() {
+      calc.maintainability.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the maintainability method&#039;, function() {
+      calc.maintainability(totals, reports, len);
+    });
+
+    it(&#039;Should have an accurate average maintainability&#039;, function() {
+      totals.average_maintainability.should.be.equal(&#039;100.00&#039;);
+    });
+  });
+
+  describe(&#039;Difficulty&#039;, function() {
+    it(&#039;Should have a method difficulty&#039;, function() {
+      calc.difficulty.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the difficulty method&#039;, function() {
+      calc.difficulty(totals, reports, len);
+    });
+
+    it(&#039;Should have an accurate average difficulty&#039;, function() {
+      totals.average_difficulty.should.be.equal(&#039;2.00&#039;);
+    });
+  });
+
+  describe(&#039;Time&#039;, function() {
+    it(&#039;Should have a method time&#039;, function() {
+      calc.time.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the time method&#039;, function() {
+      calc.time(totals, reports, len);
+    });
+
+    it(&#039;Should have an accurate total time&#039;, function() {
+      totals.total_time.should.be.equal(&#039;7200.00&#039;);
+    });
+
+    it(&#039;Should have an accurate average time&#039;, function() {
+      totals.average_time.should.be.equal(&#039;3600.00&#039;);
+    });
+  });
+
+  describe(&#039;Cost&#039;, function() {
+    it(&#039;Should have a method cost&#039;, function() {
+      calc.cost.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the cost method&#039;, function() {
+      calc.cost(totals, len);
+    });
+
+    it(&#039;Should have an accurate total cost&#039;, function() {
+      totals.total_cost.should.be.equal(&#039;93.60&#039;);
+    });
+
+    it(&#039;Should have an accurate average cost&#039;, function() {
+      totals.average_cost.should.be.equal(&#039;46.80&#039;);
+    });
+  });
+
+  describe(&#039;Bugs&#039;, function() {
+    it(&#039;Should have a method bugs&#039;, function() {
+      calc.bugs.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the bugs method&#039;, function() {
+      calc.bugs(totals, reports, len);
+    });
+
+    it(&#039;Should have an accurate total_bugs&#039;, function() {
+      totals.total_bugs.should.be.equal(&#039;2.00&#039;);
+    });
+
+    it(&#039;Should have an accurate average_bugs&#039;, function() {
+      totals.average_bugs.should.be.equal(&#039;1.00&#039;);
+    });
+  });
+
+  describe(&#039;Dependencies&#039;, function() {
+    it(&#039;Should have a method dependencies&#039;, function() {
+      calc.dependencies.should.be.type(&#039;function&#039;);
+    });
+
+    it(&#039;Should run the dependencies method&#039;, function() {
+      calc.dependencies(totals, reports, len);
+    });
+
+    it(&#039;Should have an array of dependencies&#039;, function() {
+      totals.dependencies.length.should.be.equal(3);
+    });
+
+    it(&#039;Should have an accurate total dependencies count&#039;, function() {
+      totals.total_dependencies.should.be.equal(3);
+    });
+
+    it(&#039;Should have an accurate average dependencies count&#039;, function() {
+      totals.average_dependencies.should.be.equal(&#039;1.50&#039;);
+    });
+  });
+});</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

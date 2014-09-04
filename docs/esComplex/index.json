@@ -1,14 +1,16 @@
 {
   "reports": [
-    undefined,
-    undefined,
-    undefined
+    "gulpfile.js.json",
+    "lib/calculator.js.json",
+    "lib/index.js.json",
+    "test/calculator.js.json",
+    "test/index.js.json"
   ],
-  "baseDir": "c:\var\node\prowl\modules\gulp-module-cost\",
-  "cwd": "c:\var\node\prowl\modules\gulp-module-cost",
+  "baseDir": "/var/node/prowl/modules/gulp-module-cost/",
+  "cwd": "/var/node/prowl/modules/gulp-module-cost",
   "reporterName": "gulp-escomplex-reporter-json",
-  "reporterVersion": "1.0.0",
+  "reporterVersion": "0.1.4",
   "analysis": "gulp-escomplex",
   "analysisVersion": "1.0.0",
-  "created": "2014-09-02T06:22:42.854Z"
+  "created": "2014-09-04T20:07:50.703Z"
 }

@@ -1,6 +1,6 @@
 {
   "name": "gulp-module-cost",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Gulp cost module integration",
   "main": "lib/index.js",
   "scripts": {
@@ -23,7 +23,8 @@
   "homepage": "https://github.com/prowl/gulp-module-cost",
   "devDependencies": {
     "gulp": "^3.8.7",
-    "gulp-module": "https://npm.fury.io/GTpAPYjxGn3jnpGRdN3L/thotjs/gulp-module/-/latest.tgz"
+    "gulp-module": "https://npm.fury.io/GTpAPYjxGn3jnpGRdN3L/thotjs/gulp-module/-/latest.tgz",
+    "should": "^4.0.4"
   },
   "dependencies": {
     "lodash": "^2.4.1",

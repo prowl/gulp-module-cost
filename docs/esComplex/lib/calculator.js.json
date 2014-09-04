@@ -931,6 +931,6 @@
   "meta": {
     "analysis": "gulp-escomplex",
     "analysisVersion": "1.0.0",
-    "fileName": "lib\calculator.js"
+    "fileName": "lib/calculator.js"
   }
 }
